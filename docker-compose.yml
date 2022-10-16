@@ -1,0 +1,6 @@
+version: "3"
+services:
+  blueprint-java-spring-boot:
+    image: tblasche/blueprint-java-spring-boot:latest
+    ports:
+      - "8080:8080"

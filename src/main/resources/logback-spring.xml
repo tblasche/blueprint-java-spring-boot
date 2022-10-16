@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="CONSOLE_JSON" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+      <!-- Providers see https://github.com/logstash/logstash-logback-encoder#providers-for-loggingevents -->
+      <providers>
+        <timestamp>
+          <timeZone>UTC</timeZone>
+        </timestamp>
+        <pattern>
+          <omitEmptyFields>true</omitEmptyFields>
+          <!-- Pattern Details see http://logback.qos.ch/manual/layouts.html#conversionWord -->
+          <pattern>
+            {
+            "type": "application",
+            "msg": "%message",
+            "logger": "%logger{24}",
+            "level": "%level",
+            "file": "%file",
+            "line": "#asLong{%line}",
+            "stacktrace": "%exception"
+            }
+          </pattern>
+        </pattern>
+        <mdc/>
+        <arguments>
+          <includeNonStructuredArguments>false</includeNonStructuredArguments>
+        </arguments>
+      </providers>
+    </encoder>
+  </appender>
+  <root level="INFO">
+    <appender-ref ref="CONSOLE_JSON"/>
+  </root>
+</configuration>
