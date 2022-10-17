@@ -34,6 +34,12 @@ test {
   useJUnitPlatform()
 }
 
+jacocoTestReport {
+  reports {
+    xml.required = true
+  }
+}
+
 sonarqube {
   properties {
     property 'sonar.projectKey', 'tblasche_blueprint-java-spring-boot'
