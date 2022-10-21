@@ -1,11 +1,11 @@
 plugins {
-  id 'com.github.ben-manes.versions' version '0.42.0'
+  id 'com.github.ben-manes.versions' version '0.43.0'
   id 'groovy'
-  id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+  id 'io.spring.dependency-management' version '1.1.0'
   id 'jacoco'
   id 'java'
   id 'org.sonarqube' version '3.4.0.2513'
-  id 'org.springframework.boot' version '2.7.4'
+  id 'org.springframework.boot' version '2.7.5'
 }
 
 group = 'de.tblasche'
@@ -16,9 +16,9 @@ repositories {
 }
 
 dependencies {
-  implementation 'ch.qos.logback:logback-access:1.2.11' // version must match ch.qos.logback:logback-classic from spring-boot-starter-logging
+  implementation 'ch.qos.logback:logback-access:1.2.11' // version must match ch.qos.logback:logback-classic from spring-boot-starter-logging. See ./gradlew -q dependencies
   implementation 'net.logstash.logback:logstash-logback-encoder:7.2'
-  implementation 'org.springdoc:springdoc-openapi-ui:1.6.11'
+  implementation 'org.springdoc:springdoc-openapi-ui:1.6.12'
   implementation 'org.springframework.boot:spring-boot-starter-actuator'
   implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
   implementation 'org.springframework.boot:spring-boot-starter-web'
