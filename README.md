@@ -2,7 +2,6 @@
 ![Build Status](https://github.com/tblasche/blueprint-java-spring-boot/workflows/Build/badge.svg)
 ![License](https://img.shields.io/github/license/tblasche/blueprint-java-spring-boot)
 [![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=tblasche_blueprint-java-spring-boot&metric=coverage)](https://sonarcloud.io/summary/new_code?id=tblasche_blueprint-java-spring-boot)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tblasche_blueprint-java-spring-boot&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tblasche_blueprint-java-spring-boot)
 
 Blueprint of a Spring Boot Service with enterprise features like JSON logging, Swagger UI or Prometheus Metrics included.
 
