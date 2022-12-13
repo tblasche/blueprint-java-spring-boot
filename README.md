@@ -19,8 +19,8 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
 * CI/CD: GitHub Actions
 * Static Code Analysis via SonarCloud
 
-## Quick Start
-* Start application and find API docs at http://localhost:8080/apidoc
+## Local Development
+* Start application and find API docs at `http://localhost:8080`
   ```console
   $ ./gradlew bootRun
   ```
@@ -32,7 +32,7 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
   ```console
   $ ./gradlew check jacocoTestReport
   ```
-* Build docker image via gradle and run docker container via `docker compose`. Find API docs at http://localhost:8080/apidoc
+* Build docker image via gradle and run docker container via `docker compose`. Find API docs at `http://localhost:8080`
   ```console
   $ ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
   $ docker compose up
@@ -41,6 +41,3 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
   ```console
   $ ./gradlew dependencyUpdates -Drevision=release
   ```
-
-## API Documentation
-Swagger UI is accessible via `/apidoc`
