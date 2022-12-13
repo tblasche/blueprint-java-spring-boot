@@ -4,6 +4,7 @@ spring:
 server:
   port: 8080
   tomcat.accesslog.enabled: true
+  forward-headers-strategy: framework
 
 management:
   endpoint.prometheus.enabled: true
@@ -17,5 +18,5 @@ springdoc:
   show-actuator: true
   swagger-ui:
     displayRequestDuration: true
-    path: /apidoc
     tryItOutEnabled: true
+    use-root-path: true
