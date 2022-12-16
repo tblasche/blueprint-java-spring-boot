@@ -23,7 +23,7 @@ class PrometheusMetricsIT extends Specification {
     def result = restTemplate.getForEntity("http://localhost:" + port + "/prometheus-metrics", String)
 
     then:
-    result.statusCodeValue == 200
+    result.statusCode.value() == 200
     result.headers.getContentType().isCompatibleWith(MediaType.valueOf("text/plain; charset=utf8"))
     result.body.contains("jvm_memory_max_bytes")
   }

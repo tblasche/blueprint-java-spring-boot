@@ -21,7 +21,7 @@ class SwaggerUiIT extends Specification {
     def result = restTemplate.getForEntity("http://localhost:" + port + requestPath, String)
 
     then:
-    result.statusCodeValue == 200
+    result.statusCode.value() == 200
     result.body.contains("<title>Swagger UI</title>")
 
     where:
@@ -33,7 +33,7 @@ class SwaggerUiIT extends Specification {
     def result = restTemplate.getForEntity("http://localhost:" + port + "/v3/api-docs", String)
 
     then:
-    result.statusCodeValue == 200
+    result.statusCode.value() == 200
     result.headers.getContentType().isCompatibleWith(MediaType.APPLICATION_JSON)
     result.body.contains('"openapi":"3.0.1"')
   }

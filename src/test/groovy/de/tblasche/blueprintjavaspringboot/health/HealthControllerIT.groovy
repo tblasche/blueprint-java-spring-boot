@@ -20,7 +20,7 @@ class HealthControllerIT extends Specification {
     def result = restTemplate.getForEntity("http://localhost:" + port + "/alive", String)
 
     then:
-    result.statusCodeValue == 200
+    result.statusCode.value() == 200
     !result.hasBody()
   }
 
@@ -29,7 +29,7 @@ class HealthControllerIT extends Specification {
     def result = restTemplate.getForEntity("http://localhost:" + port + "/ready", String)
 
     then:
-    result.statusCodeValue == 200
+    result.statusCode.value() == 200
     !result.hasBody()
   }
 }
