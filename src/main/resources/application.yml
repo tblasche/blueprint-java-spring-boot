@@ -15,6 +15,7 @@ management:
     web.path-mapping.prometheus: prometheus-metrics
 
 springdoc:
+  model-and-view-allowed: true
   show-actuator: true
   swagger-ui:
     displayRequestDuration: true
