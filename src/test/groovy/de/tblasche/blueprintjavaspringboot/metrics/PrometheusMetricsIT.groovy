@@ -1,7 +1,7 @@
 package de.tblasche.blueprintjavaspringboot.metrics
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.actuate.metrics.AutoConfigureMetrics
+import org.springframework.boot.test.autoconfigure.actuate.observability.AutoConfigureObservability
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.test.web.server.LocalServerPort
@@ -9,7 +9,7 @@ import org.springframework.http.MediaType
 import spock.lang.Specification
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMetrics
+@AutoConfigureObservability
 class PrometheusMetricsIT extends Specification {
 
   @LocalServerPort
