@@ -1,4 +1,4 @@
-name: Main
+name: Build
 
 on: [push, workflow_dispatch]
 
@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-java@v3
         with:
-          java-version: 17
+          java-version: 19
           distribution: temurin
           cache: gradle
       - name: Build / Test / Analyze
@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-java@v3
         with:
-          java-version: 17
+          java-version: 19
           distribution: temurin
           cache: gradle
       - name: Login to Docker Hub
