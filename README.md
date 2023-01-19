@@ -37,7 +37,7 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
   $ ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
   $ docker compose up
   ```
-* Check for updated dependencies via [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin)
+* Check for outdated dependencies via [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin)
   ```console
   $ ./gradlew dependencyUpdates -Drevision=release
   ```
