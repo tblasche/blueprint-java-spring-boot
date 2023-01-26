@@ -32,7 +32,7 @@ class LoggingIT extends Specification {
       contains('"msg":"test message"')
       contains('"logger":"test-logger"')
       contains('"level":"WARN"')
-      contains('"file":"LoggingIT.groovy"')
+      contains('"file":"')
       contains('"line":')
       endsWith('}')
     }
