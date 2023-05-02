@@ -5,7 +5,7 @@ plugins {
   id 'jacoco'
   id 'java'
   id 'org.sonarqube' version '4.0.0.2929'
-  id 'org.springframework.boot' version '3.0.2'
+  id 'org.springframework.boot' version '3.0.6'
 }
 
 group = 'de.tblasche'
@@ -18,13 +18,13 @@ repositories {
 dependencies {
   implementation 'ch.qos.logback:logback-access'
   implementation 'net.logstash.logback:logstash-logback-encoder:7.3'
-  implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+  implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
   implementation 'org.springframework.boot:spring-boot-starter-actuator'
   implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
   implementation 'org.springframework.boot:spring-boot-starter-web'
   runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
   testImplementation 'io.github.joke:spock-outputcapture:3.0.1'
-  testImplementation 'org.apache.groovy:groovy-all:4.0.9'
+  testImplementation 'org.apache.groovy:groovy-all:4.0.11'
   testImplementation 'org.spockframework:spock-core:2.4-M1-groovy-4.0'
   testImplementation 'org.spockframework:spock-spring:2.4-M1-groovy-4.0'
   testImplementation 'org.springframework.boot:spring-boot-starter-test'

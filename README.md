@@ -41,3 +41,7 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
   ```console
   $ ./gradlew dependencyUpdates -Drevision=release
   ```
+* Update gradle wrapper to latest gradle version
+  ```console
+  $ ./gradlew wrapper --gradle-version latest
+  ```
