@@ -22,6 +22,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew build jacocoTestReport sonarqube --info
+      - name: Dependency Vulnerabilities Check
+        run: ./gradlew dependencyCheckAnalyze
   docker_build_push:
     needs: build_test_analyze
     runs-on: ubuntu-latest

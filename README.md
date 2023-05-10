@@ -28,7 +28,7 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
   ```console
   $ ./gradlew clean test
   ```
-* Generate Code Coverage Report. HTML Report can be found in `./build/reports/jacoco/test/html`
+* Generate Code Coverage Report. HTML report can be found in `./build/reports/jacoco/test/html`
   ```console
   $ ./gradlew check jacocoTestReport
   ```
@@ -40,6 +40,10 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
 * Check for outdated dependencies via [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin)
   ```console
   $ ./gradlew dependencyUpdates -Drevision=release
+  ```
+* Check for vulnerable dependencies via [OWASP Dependency-Check Plugin](https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html). HTML report can be found in `./build/reports/dependency-check-report.html`
+  ```console
+  $ ./gradlew dependencyCheckAnalyze
   ```
 * Update gradle wrapper to latest gradle version
   ```console
