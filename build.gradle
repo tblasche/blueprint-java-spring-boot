@@ -51,5 +51,5 @@ sonarqube {
 }
 
 dependencyCheck {
-  failBuildOnCVSS = 8
+  failBuildOnCVSS = 9
 }

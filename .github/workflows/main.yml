@@ -43,7 +43,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push tagged Docker image
         run: |
-          ./gradlew bootBuildImage --imageName=${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
+          ./gradlew bootBuildImage --imageName=${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }} --stacktrace
           docker push ${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
       - name: Build and push latest Docker image
         if: github.ref == 'refs/heads/main'
