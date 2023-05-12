@@ -18,6 +18,7 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
 * Code Coverage: JaCoCo Report
 * CI/CD: GitHub Actions
 * Static Code Analysis via SonarCloud
+* Security: OWASP Dependency Check
 
 ## Local Development
 * Start application and find API docs at `http://localhost:8080`
