@@ -10,7 +10,7 @@ plugins {
 }
 
 group = 'de.tblasche'
-sourceCompatibility = '19'
+sourceCompatibility = '20'
 
 repositories {
   mavenCentral()
