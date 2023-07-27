@@ -20,7 +20,7 @@ Blueprint of a Spring Boot Service with enterprise features like JSON logging, S
 * Static Code Analysis via SonarCloud
 * Security: OWASP Dependency Check
 
-## Local Development
+## Quick Start
 * Start application and find API docs at `http://localhost:8080`
   ```console
   $ ./gradlew bootRun
