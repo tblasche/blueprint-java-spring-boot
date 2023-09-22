@@ -11,7 +11,6 @@ plugins {
 
 java {
   group = 'de.tblasche'
-  sourceCompatibility = JavaVersion.VERSION_21
 }
 
 repositories {
