@@ -9,8 +9,10 @@ plugins {
   id 'org.springframework.boot' version '3.1.4'
 }
 
-group = 'de.tblasche'
-sourceCompatibility = '21'
+java {
+  group = 'de.tblasche'
+  sourceCompatibility = JavaVersion.VERSION_21
+}
 
 repositories {
   mavenCentral()
