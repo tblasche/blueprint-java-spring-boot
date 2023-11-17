@@ -58,7 +58,3 @@ sonarqube {
 dependencyCheck {
   failBuildOnCVSS = 10
 }
-
-tasks.named('bootBuildImage') {
-  buildpacks = ['paketobuildpacks/bellsoft-liberica:latest']
-}
