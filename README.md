@@ -5,48 +5,63 @@
 
 Blueprint of a Spring Boot Service with enterprise features like JSON logging, Swagger UI or Prometheus Metrics included.
 
-## Tech Info
-* Language: Java
-* Build System: Gradle
-* Containerization: Docker
-* Framework: Spring Boot
-* Testing: Spock, Spring MockMvc
-* Template Engine: Thymeleaf
-* Metrics: Prometheus
-* API Documentation: Swagger UI via [springdoc](https://springdoc.org/)
-* Logging: Access and Application Logs in JSON format
-* Code Coverage: JaCoCo Report
-* CI/CD: GitHub Actions
-* Static Code Analysis via SonarCloud
-* Security: OWASP Dependency Check
+## Tech
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
 
-## Quick Start
+The service...
+* is `docker`'ized
+* utilizes `Spring MockMvc` and `Spock` for testing
+* provides `Prometheus` metrics
+* provides `Swagger UI` and `OpenAPI Specification` via [springdoc](https://springdoc.org/)
+* writes `access and application logs` in `JSON` format
+* uses `Thymeleaf` as Template Engine
+* utilizes `GitHub Actions` for CI/CD
+* performs static code analysis via `SonarCloud`
+* checks for vulnerable dependencies via `OWASP Dependency Check`
+
+## Run locally
+* Native: http://localhost:8080/
+  ```console
+  ./gradlew bootRun
+  ```
+* Via Docker: http://localhost:8080/
+  ```console
+  ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
+  docker compose up
+  ```
+
+## API Docs / Swagger UI
+Find API docs at `/`
+
+## Common Actions
 * Start application and find API docs at `http://localhost:8080`
   ```console
-  $ ./gradlew bootRun
+  ./gradlew bootRun
   ```
 * Run tests
   ```console
-  $ ./gradlew clean test
+  ./gradlew clean test
   ```
 * Generate Code Coverage Report. HTML report can be found in `./build/reports/jacoco/test/html`
   ```console
-  $ ./gradlew check jacocoTestReport
+  ./gradlew check jacocoTestReport
   ```
 * Build docker image via gradle and run docker container via `docker compose`. Find API docs at `http://localhost:8080`
   ```console
-  $ ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
-  $ docker compose up
+  ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
+  docker compose up
   ```
 * Check for outdated dependencies via [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin)
   ```console
-  $ ./gradlew dependencyUpdates -Drevision=release
+  ./gradlew dependencyUpdates -Drevision=release
   ```
 * Check for vulnerable dependencies via [OWASP Dependency-Check Plugin](https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html). HTML report can be found in `./build/reports/dependency-check-report.html`
   ```console
-  $ ./gradlew dependencyCheckAnalyze
+  ./gradlew dependencyCheckAnalyze
   ```
 * Update gradle wrapper to latest gradle version
   ```console
-  $ ./gradlew wrapper --gradle-version latest
+  ./gradlew wrapper --gradle-version latest
   ```
