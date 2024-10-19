@@ -30,7 +30,7 @@ class SwaggerUiIT extends Specification {
 
   def "should provide OpenAPI v3 API doc"() {
     when:
-    def result = restTemplate.getForEntity("http://localhost:" + port + "/v3/api-docs", String)
+    def result = restTemplate.getForEntity("http://localhost:" + port + "/apidoc-json", String)
 
     then:
     result.statusCode.value() == 200
