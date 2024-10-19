@@ -25,7 +25,7 @@ class SwaggerUiIT extends Specification {
     result.body.contains("<title>Swagger UI</title>")
 
     where:
-    requestPath << ["/", "/swagger-ui/index.html"]
+    requestPath << ["/apidoc", "/swagger-ui/index.html"]
   }
 
   def "should provide OpenAPI v3 API doc"() {

@@ -17,8 +17,10 @@ management:
 springdoc:
   model-and-view-allowed: true
   show-actuator: true
-  api-docs.path: /apidoc-json
+  api-docs:
+    path: /apidoc-json
+    version: openapi_3_1
   swagger-ui:
     displayRequestDuration: true
     tryItOutEnabled: true
-    use-root-path: true
+    path: /apidoc

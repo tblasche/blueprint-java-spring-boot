@@ -22,21 +22,21 @@ The service...
 * checks for vulnerable dependencies via `OWASP Dependency Check`
 
 ## Run locally
-* Native: http://localhost:8080/
+* Native: http://localhost:8080/apidoc
   ```console
   ./gradlew bootRun
   ```
-* Via Docker: http://localhost:8080/
+* Via Docker: http://localhost:8080/apidoc
   ```console
   ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
   docker compose up
   ```
 
 ## API Docs / Swagger UI
-Find API docs at `/`
+Find API docs at `/apidoc`
 
 ## Common Actions
-* Start application and find API docs at `http://localhost:8080`
+* Start application and find API docs at `http://localhost:8080/apidoc`
   ```console
   ./gradlew bootRun
   ```
@@ -48,7 +48,7 @@ Find API docs at `/`
   ```console
   ./gradlew check jacocoTestReport
   ```
-* Build docker image via gradle and run docker container via `docker compose`. Find API docs at `http://localhost:8080`
+* Build docker image via gradle and run docker container via `docker compose`. Find API docs at `http://localhost:8080/apidoc`
   ```console
   ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
   docker compose up
