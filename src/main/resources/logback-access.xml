@@ -6,7 +6,7 @@
         <pattern>
           <omitEmptyFields>true</omitEmptyFields>
           <!-- Encoder Details see https://github.com/logstash/logstash-logback-encoder#accessevent-patterns -->
-          <!-- Pattern see http://logback.qos.ch/xref/ch/qos/logback/access/PatternLayout.html -->
+          <!-- Pattern see https://logback.qos.ch/xref/ch/qos/logback/access/PatternLayout.html -->
           <pattern>
             {
             "@timestamp": "%date{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}",
