@@ -28,13 +28,13 @@ class SwaggerUiIT extends Specification {
     requestPath << ["/apidoc", "/swagger-ui/index.html"]
   }
 
-  def "should provide OpenAPI v3 API doc"() {
+  def "should provide OpenAPI v3.1 API doc"() {
     when:
     def result = restTemplate.getForEntity("http://localhost:" + port + "/apidoc-json", String)
 
     then:
     result.statusCode.value() == 200
     result.headers.getContentType().isCompatibleWith(MediaType.APPLICATION_JSON)
-    result.body.contains('"openapi":"3.0.1"')
+    result.body.contains('"openapi":"3.1.0"')
   }
 }
