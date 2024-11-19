@@ -21,6 +21,6 @@ springdoc:
     path: /apidoc-json
     version: openapi_3_1
   swagger-ui:
-    displayRequestDuration: true
-    tryItOutEnabled: true
+    display-request-duration: true
+    try-it-out-enabled: true
     path: /apidoc

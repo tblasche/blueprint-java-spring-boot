@@ -28,15 +28,14 @@ The service...
   ```
 * Via Docker: http://localhost:8080/apidoc
   ```console
-  ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
-  docker compose up
+  docker compose up --build
   ```
 
 ## API Docs / Swagger UI
 Find API docs at `/apidoc`
 
 ## Common Actions
-* Start application and find API docs at `http://localhost:8080/apidoc`
+* Start application and find API docs at http://localhost:8080/apidoc
   ```console
   ./gradlew bootRun
   ```
@@ -48,10 +47,9 @@ Find API docs at `/apidoc`
   ```console
   ./gradlew check jacocoTestReport
   ```
-* Build docker image via gradle and run docker container via `docker compose`. Find API docs at `http://localhost:8080/apidoc`
+* Build docker image and run via `docker compose`. Find API docs at http://localhost:8080/apidoc
   ```console
-  ./gradlew bootBuildImage --imageName=tblasche/blueprint-java-spring-boot
-  docker compose up
+  docker compose up --build
   ```
 * Check for outdated dependencies via [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin)
   ```console
