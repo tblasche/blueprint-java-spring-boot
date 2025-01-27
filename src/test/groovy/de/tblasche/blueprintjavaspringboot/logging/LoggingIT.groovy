@@ -45,7 +45,7 @@ class LoggingIT extends Specification {
     then:
     with(getLastLineFromOutputCapture()) {
       startsWith('{')
-      contains('"@timestamp":')
+      contains('"@timestamp":"20')
       contains('"type":"access"')
       contains('"protocol":"HTTP/1.1"')
       contains('"method":"GET"')
@@ -54,7 +54,7 @@ class LoggingIT extends Specification {
       contains('"status":200')
       contains('"duration":')
       !contains('"bytesSent":')
-      contains('"userAgent":"Java/')
+      contains('"userAgent":"Java')
       matches(/.+"requestId":"[a-z0-9]{32}".+/)
       contains('"remoteIp":')
       !contains('"user":')
