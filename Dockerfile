@@ -1,4 +1,4 @@
-FROM gradle:8.11-jdk21-alpine AS builder
+FROM gradle:8.13-jdk21-alpine AS builder
 WORKDIR /app
 COPY build.gradle ./
 COPY src/main ./src/main
