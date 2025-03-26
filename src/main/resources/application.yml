@@ -7,10 +7,10 @@ server:
   forward-headers-strategy: framework
 
 management:
-  endpoint.prometheus.enabled: true
+  endpoint.prometheus.access: unrestricted
   endpoints:
     web.base-path: /
-    enabled-by-default: false
+    access.default: none
     web.exposure.include: prometheus
     web.path-mapping.prometheus: prometheus-metrics
 
